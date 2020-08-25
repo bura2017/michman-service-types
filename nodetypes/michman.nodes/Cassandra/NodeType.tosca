@@ -13,6 +13,6 @@ node_types:
         default: 3.11.4
     requirements:
       - spark:
-          node: tosca.nodes.Compute
+          capability: tosca.capabilities.Compute
           relationship: tosca.relationships.DependsOn
           occurrences: [1, 1]
