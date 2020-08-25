@@ -11,8 +11,6 @@ node_types:
       version:
         type: string
         default: 3.11.4
-        constraints:
-          - valid_values: [3.11.4]
     requirements:
       - spark:
           capability: tosca.capabilities.Compute
