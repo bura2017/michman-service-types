@@ -1,7 +1,7 @@
 tosca_definitions_version: tosca_simple_yaml_1_0
 
 node_types:
-  michman.node.versioned.Cassandra.Cassandra-3-11-4:
+  michman.nodes.versioned.Cassandra.Cassandra-3-11-4:
     derived_from: tosca.nodes.Root
     attributes:
       version: 
@@ -9,6 +9,6 @@ node_types:
         default: 3.11.4
     requirements:
       - spark:
-          node: michman.nodes.Spark
+          node: tosca.nodes.Compute
           relationship: tosca.relationships.DependsOn
           occurrences: [1, 1]
