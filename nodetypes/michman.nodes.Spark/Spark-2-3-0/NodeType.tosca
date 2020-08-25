@@ -31,5 +31,5 @@ node_types:
         type: integer
         default: 10240
         required: true
-        description: "don't auto-detect spark worker memory and use specified value, can b$
+        description: "Do not auto-detect spark worker memory and use specified value, can b$
 

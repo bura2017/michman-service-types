@@ -31,5 +31,5 @@ node_types:
         type: integer
         default: 10240
         required: true
-        description: "don't auto-detect spark worker memory and use specified value, can be useful if other processes on slave nodes (e.g. python) need more memory, default for 10Gb-20Gb RAM slaves is to leave 2Gb to system/other processes"
+        description: "Do not auto-detect spark worker memory and use specified value, can be useful if other processes on slave nodes (e.g. python) need more memory, default for 10Gb-20Gb RAM slaves is to leave 2Gb to system/other processes"
 
