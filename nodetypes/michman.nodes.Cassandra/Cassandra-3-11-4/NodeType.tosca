@@ -18,6 +18,6 @@ node_types:
         description: Setup version required. Default version is 2.3.0
     requirements:
       - spark:
-          capability: tosca.capabilities.Spark
+          capability: michman.capabilities.Spark
           relationship: tosca.relationships.DependsOn
           occurrences: [0, 1]
