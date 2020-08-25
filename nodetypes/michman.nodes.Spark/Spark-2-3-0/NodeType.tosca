@@ -26,10 +26,10 @@ node_types:
         type: integer
         default: 10240
         required: true
-        description: "Amount of physical memory, in MB, that can be allocated for containe$
+        description: "Amount of physical memory, in MB, that can be allocated for containers"
       worker_mem_mb:
         type: integer
         default: 10240
         required: true
-        description: "Do not auto-detect spark worker memory and use specified value, can b$
+        description: "Do not auto-detect spark worker memory and use specified value, can b"
 
