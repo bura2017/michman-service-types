@@ -32,4 +32,6 @@ node_types:
         default: 10240
         required: true
         description: "Do not auto-detect spark worker memory and use specified value, can b"
-
+    capabilities:
+      dependence:
+        type: michman.capabilities.Spark
