@@ -19,7 +19,7 @@ node_types:
         type: string
         required: true
         description: keycloak hostname
-      custom_oidc_providers_ip
+      custom_oidc_providers_ip:
         type: string
         required: true
         description: keycloak server ip

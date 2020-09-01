@@ -24,7 +24,7 @@ Supported versions: 6.0.1"
       dependence:
         type: michman.capabilities.Jupyterhub
     requirements:
-      - spark:
+      - jupyter:
           capability: michman.capabilities.Jupyter
           relationship: tosca.relationships.DependsOn
           occurrences: [1, 1]
