@@ -8,23 +8,21 @@ topology_template:
     Compute_0:
       type: tosca.nodes.Compute
       metadata:
-        x: "589"
-        y: "455"
+        x: "801"
+        y: "538"
         displayName: "Compute"
     Nextcloud_0:
       type: michman.nodes.Nextcloud
       metadata:
-        x: "493"
-        y: "97"
+        x: "604"
+        y: "162"
         displayName: "Nextcloud"
       properties:
-        custom_oidc_providers_host: null
+        custom_oidc_providers_host: "testing_value"
         custom_oidc_providers_ip: null
         version: "default"
         weblab_name: null
         url: null
-        nextcloud_nfs_server_ip: null
-        component_version: null
       requirements:
         - nfs_server:
             node: NFSServer_0
@@ -32,22 +30,22 @@ topology_template:
             capability: dependence
         - host:
             node: Compute_0
-            relationship: con_HostedOn_0
+            relationship: con_HostedOn_1
             capability: host
     NFSServer_0:
       type: michman.nodes.NFSServer
       metadata:
-        x: "992"
-        y: "229"
+        x: "1095"
+        y: "176"
         displayName: "NFSServer"
       properties:
         version: "default"
-        weblab_name: null
-        component_version: null
+        weblab_name: "testing_value"
+        nextcloud_nfs_server_ip: { get_attribute: [ HOST, public_address ] }
       requirements:
         - host:
             node: Compute_0
-            relationship: con_HostedOn_1
+            relationship: con_HostedOn_0
             capability: host
   relationship_templates:
     con_HostedOn_0:
