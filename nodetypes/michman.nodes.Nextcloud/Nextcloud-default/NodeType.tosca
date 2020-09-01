@@ -13,6 +13,8 @@ node_types:
         type: string
         default: default
     properties:
+      nextcloud_nfs_server_ip:
+        default: {get_attribute: [HOST, public_address]}
       custom_oidc_providers_host:
         type: string
         required: true
@@ -36,3 +38,8 @@ node_types:
     capabilities:
       dependence:
         type: michman.capabilities.Nextcloud
+    requirements:
+      - nfs_server:
+          capability: michman.capabilities.NFSServer
+          relationship: michman.relationships.NextcloudNFSServerDependsOn
+          occurrences: [1, 1]
