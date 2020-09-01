@@ -9,7 +9,9 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.NFSServer"
     properties:
-      version:
+      nextcloud_nfs_server_ip:
+        default: {get_attribute: [HOST, public_address]}
+      component_version:
         type: string
         default: default
         constraints:

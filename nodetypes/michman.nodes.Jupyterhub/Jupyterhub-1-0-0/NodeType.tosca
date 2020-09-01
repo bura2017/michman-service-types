@@ -9,12 +9,12 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Jupyterhub"
     properties:
-      version:
+      component_version:
         type: string
         default: 1.0.0
         constraints:
           - valid_values: [1.0.0]
-      jupyter_version:
+      jupyter_component_version:
         type: string
         required: true
         description: "Setup version required. Default version is 2.3.0. \

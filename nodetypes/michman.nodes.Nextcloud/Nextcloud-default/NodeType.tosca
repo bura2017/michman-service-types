@@ -9,13 +9,11 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Nextcloud"
     properties:
-      version:
+      component_version:
         type: string
         default: default
         constraints:
           - valid_values: [default]
-      nextcloud_nfs_server_ip:
-        default: {get_attribute: [HOST, public_address]}
       custom_oidc_providers_host:
         type: string
         required: true
@@ -32,10 +30,6 @@ node_types:
         type: string
         required: true
         description: name of Web Laboratory
-      nextcloud_nfs_server_ip:
-        type: string
-        required: true
-        description: NFS server IP
     capabilities:
       dependence:
         type: michman.capabilities.Nextcloud

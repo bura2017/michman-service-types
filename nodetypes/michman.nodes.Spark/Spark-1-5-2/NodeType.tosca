@@ -8,7 +8,7 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Spark"
     properties:
-      version:
+      component_version:
         type: string
         default: 1.5.2
         constraints:

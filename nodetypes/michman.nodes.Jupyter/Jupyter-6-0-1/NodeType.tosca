@@ -9,12 +9,12 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Jupyter"
     properties:
-      version:
+      component_version:
         type: string
         default: 6.0.1
         constraints:
           - valid_values: [6.0.1]
-      spark_version:
+      spark_component_version:
         type: string
         required: true
         description: "Setup version required. Default version is 2.3.0. \
