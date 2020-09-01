@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Cassandra"
-    attributes:
+    properties:
       version:
         type: string
         default: 3.11.4
-    properties:
+        constraints:
+          - valid_values: [3.11.4]
       spark_version:
         type: string
         required: true

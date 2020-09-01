@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Nextcloud"
-    attributes:
+    properties:
       version:
         type: string
         default: default
-    properties:
+        constraints:
+          - valid_values: [default]
       nextcloud_nfs_server_ip:
         default: {get_attribute: [HOST, public_address]}
       custom_oidc_providers_host:

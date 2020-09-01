@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Jupyterhub"
-    attributes:
+    properties:
       version:
         type: string
         default: 1.0.0
-    properties:
+        constraints:
+          - valid_values: [1.0.0]
       jupyter_version:
         type: string
         required: true

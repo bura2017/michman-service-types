@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Elastic"
-    attributes:
+    properties:
       version:
         type: string
         default: 7.1.1
-    properties:
+        constraints:
+          - valid_values: [7.1.1]
       heap-size:
         type: string
         description: use specific ElasticSearch heap size. Default heap size is 1g (1 GB).

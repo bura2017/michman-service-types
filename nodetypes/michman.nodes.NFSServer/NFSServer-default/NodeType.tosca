@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.NFSServer"
-    attributes:
+    properties:
       version:
         type: string
         default: default
-    properties:
+        constraints:
+          - valid_values: [default]
       weblab_name:
         type: string
         required: true

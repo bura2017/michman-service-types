@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Ignite"
-    attributes:
+    properties:
       version:
         type: string
         default: 7.1.1
-    properties:
+        constraints:
+          - valid_values: [7.1.1]
       memory:
         type: integer
         default: 30

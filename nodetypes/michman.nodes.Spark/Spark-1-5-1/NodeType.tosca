@@ -7,11 +7,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Spark"
-    attributes:
+    properties:
       version:
         type: string
         default: 1.5.1
-    properties:
+        constraints:
+          - valid_values: [1.5.1]
       hadoop_version:
         type: string
         default: 2.6

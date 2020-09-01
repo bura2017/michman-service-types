@@ -8,11 +8,12 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "michman.nodes.Jupyter"
-    attributes:
+    properties:
       version:
         type: string
         default: 6.0.1
-    properties:
+        constraints:
+          - valid_values: [6.0.1]
       spark_version:
         type: string
         required: true
