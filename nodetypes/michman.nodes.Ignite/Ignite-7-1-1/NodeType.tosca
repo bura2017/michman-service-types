@@ -2,7 +2,7 @@ tosca_definitions_version: tosca_simple_yaml_1_0
 
 node_types:
   michman.nodes.Ignite.Ignite-7-1-1:
-    derived_from: tosca.nodes.Root
+    derived_from: tosca.nodes.SoftwareComponent
     description: "Apache Ignite service"
     metadata:
       abstract: "false"

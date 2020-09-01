@@ -2,7 +2,7 @@ tosca_definitions_version: tosca_simple_yaml_1_0
 
 node_types:
   michman.nodes.Jupyter.Jupyter-6-0-1:
-    derived_from: tosca.nodes.Root
+    derived_from: tosca.nodes.SoftwareComponent
     description: "Jupyter version 6.0.1 (latest for pip install)"
     metadata:
       abstract: "false"
