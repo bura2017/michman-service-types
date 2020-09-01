@@ -1,0 +1,39 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+metadata:
+  targetNamespace: "michman.blueprints"
+
+topology_template:
+  node_templates:
+    Nextcloud_0:
+      type: michman.nodes.Nextcloud
+      metadata:
+        x: "482"
+        y: "159"
+        displayName: "Nextcloud"
+      properties:
+        custom_oidc_providers_host: null
+        custom_oidc_providers_ip: null
+        version: "default"
+        weblab_name: null
+        url: null
+        nextcloud_nfs_server_ip: null
+      requirements:
+        - nfs_server:
+            node: NFSServer_0
+            relationship: con_NextcloudNFSServerDependsOn_0
+            capability: dependence
+    NFSServer_0:
+      type: michman.nodes.NFSServer
+      metadata:
+        x: "955"
+        y: "280"
+        displayName: "NFSServer"
+      properties:
+        version: "default"
+        weblab_name: null
+  relationship_templates:
+    con_NextcloudNFSServerDependsOn_0:
+      type: michman.relationships.NextcloudNFSServerDependsOn
+      properties:
+        nextcloud_nfs_server_ip: { get_attribute: [ TARGET, nextcloud_nfs_server_ip ] }
