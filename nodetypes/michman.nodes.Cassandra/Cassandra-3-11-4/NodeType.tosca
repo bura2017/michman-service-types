@@ -11,6 +11,7 @@ node_types:
     properties:
       component_version:
         type: string
+        requried: true 
         default: 3.11.4
         constraints:
           - valid_values: [3.11.4]
