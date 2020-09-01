@@ -17,6 +17,8 @@ node_types:
         default: 2.7
         required: true
         description: "hadoop versions for spark 2.3.0"
+        constraints:
+          - valid_values: [2.6, 2.7]
       use_yarn:
         type: bool
         default: false
