@@ -9,7 +9,7 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Cassandra"
     properties:
-      component_version:
+      version:
         type: string
         required: true
         default: 3.11.4

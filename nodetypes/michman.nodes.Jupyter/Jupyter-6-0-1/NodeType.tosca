@@ -9,7 +9,7 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Jupyter"
     properties:
-      component_version:
+      version:
         type: string
         default: 6.0.1
         constraints:

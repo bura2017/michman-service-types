@@ -9,7 +9,7 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Nextcloud"
     properties:
-      component_version:
+      version:
         type: string
         default: "default"
         constraints:

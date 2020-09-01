@@ -9,7 +9,7 @@ node_types:
       final: "false"
       targetNamespace: "michman.nodes.Elastic"
     properties:
-      component_version:
+      version:
         type: string
         default: 7.1.1
         constraints:

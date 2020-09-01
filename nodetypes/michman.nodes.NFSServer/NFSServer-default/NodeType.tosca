@@ -11,7 +11,7 @@ node_types:
     properties:
       nextcloud_nfs_server_ip:
         default: {get_attribute: [HOST, public_address]}
-      component_version:
+      version:
         type: string
         default: "default"
         constraints:
