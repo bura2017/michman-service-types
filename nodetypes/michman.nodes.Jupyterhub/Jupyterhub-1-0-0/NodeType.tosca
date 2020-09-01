@@ -1,0 +1,30 @@
+tosca_definitions_version: tosca_simple_yaml_1_0
+
+node_types:
+  michman.nodes.Jupyterhub.Jupyterhub-1-0-0:
+    derived_from: tosca.nodes.Root
+    description: "Jupyterhub service"
+    metadata:
+      abstract: "false"
+      final: "false"
+      targetNamespace: "michman.nodes.Jupyterhub"
+    attributes:
+      version:
+        type: string
+        default: 1.0.0
+    properties:
+      jupyter_version:
+        type: string
+        required: true
+        description: "Setup version required. Default version is 2.3.0. \
+Supported versions: 6.0.1"
+        constraints:
+          - valid_values: [ "6.0.1"]
+    capabilities:
+      dependence:
+        type: michman.capabilities.Jupyterhub
+    requirements:
+      - spark:
+          capability: michman.capabilities.Jupyter
+          relationship: tosca.relationships.DependsOn
+          occurrences: [1, 1]
