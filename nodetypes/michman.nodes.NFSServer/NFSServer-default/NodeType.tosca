@@ -13,9 +13,9 @@ node_types:
         default: {get_attribute: [HOST, public_address]}
       component_version:
         type: string
-        default: default
+        default: "default"
         constraints:
-          - valid_values: [default]
+          - valid_values: ["default"]
       weblab_name:
         type: string
         required: true

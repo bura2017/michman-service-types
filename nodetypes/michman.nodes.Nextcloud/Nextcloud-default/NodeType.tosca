@@ -11,9 +11,9 @@ node_types:
     properties:
       component_version:
         type: string
-        default: default
+        default: "default"
         constraints:
-          - valid_values: [default]
+          - valid_values: ["default"]
       custom_oidc_providers_host:
         type: string
         required: true
