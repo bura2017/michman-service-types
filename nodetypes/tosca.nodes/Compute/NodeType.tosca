@@ -26,6 +26,8 @@ node_types:
       networks:
         type: map
         required: false
+        entry_schema:
+          type: tosca.datatypes.network.NetworkInfo
       ports:
         type: map
         required: false
