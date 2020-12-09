@@ -7,15 +7,28 @@ node_types:
       abstract: "false"
       final: "false"
       targetNamespace: "tosca.nodes"
-    attributes:
+    properties:
+      meta:
+        type: string
+        required: false
+      keypair:
+        type: string
+        required: false
+      boot_from_volume:
+        type: string
+        required: false
       private_address:
         type: string
+        required: false
       public_address:
         type: string
+        required: false
       networks:
         type: map
+        required: false
       ports:
         type: map
+        required: false
     requirements:
       - local_storage:
           capability: tosca.capabilities.Attachment
@@ -28,7 +41,7 @@ node_types:
         type: tosca.capabilities.Scalable
       endpoint:
         occurrences: [ 1, UNBOUNDED ]
-        type: tosca.capabilities.Endpoint.Admin
+        type: tosca.capabilities.Endpoint
       os:
         occurrences: [ 1, UNBOUNDED ]
         type: tosca.capabilities.OperatingSystem
