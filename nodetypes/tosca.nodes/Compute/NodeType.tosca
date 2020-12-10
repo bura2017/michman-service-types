@@ -8,6 +8,9 @@ node_types:
       final: "false"
       targetNamespace: "tosca.nodes"
     properties:
+      tosca_name: 
+        type: string
+        required: false
       meta:
         type: string
         required: false
@@ -16,6 +19,7 @@ node_types:
         required: false
       boot_from_volume:
         type: string
+        default: false
         required: false
       private_address:
         type: string
